@@ -43,7 +43,7 @@ body {
 .wrapper .screen {
   flex: 1;
   min-width: 100%;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 
@@ -58,7 +58,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .head-wrapper {
@@ -164,19 +164,23 @@ body {
 
 }
 
+
 /** Screen change **/
 
 .wrapper .category-screen {
-  transform: translateX(-100%);
+  transform: translateY(-100%);
   display: none;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
 .wrapper.show-category .home-screen {
-  transform: translateX(-100%);
+  transform: translateX(-200%);
 }
 .wrapper.show-category .category-screen {
-  transform: translateX(0);
+  transform: translateY(0);
   display: block;
+  opacity: 1;
 }
 .wrapper.show-category .screen-backdrop {
   transform: translate(-50%, -50%);
@@ -185,4 +189,101 @@ body {
 .back-btn i {
   font-size: 30px;
   cursor: pointer;
+}
+
+.category-details {
+  /* background-color: grey; */
+  margin-top: 1.5rem;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.category-details .details p{
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.category-details img {
+  width: 4rem;
+}
+.list-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  padding-left: 30px;
+}
+
+#task-list {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.5rem; */
+  justify-content: center;
+}
+#task-list li {
+  /* background-color: grey; */
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+  padding: 12px 10px 12px ;
+  font-size: 18px;
+}
+#task-list li::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  top: 16.5px;
+  left: -20px;
+  background: url(./images/unchecked.svg);
+}
+#task-list li.checked {
+  color: #959595;
+  text-decoration: line-through;
+}
+#task-list li.checked::before {
+  background: url(./images/checked_1.svg);
+}
+
+#task-list li .img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 16.5px;
+  right: 0px;
+  background: url(./images/trash-un.svg);
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+}
+#task-list li.checked .img {
+  background: url(./images/trash-ch.svg);
+  background-position: center;
+}
+
+#task-list li:hover .img {
+  opacity: 1;
+  visibility: visible;
+}
+
+.add-btn {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #BEEE62;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.add-btn i {
+  font-size: 45px;
+}
+.add-btn:hover {
+  transform: scale(1.1);
 }

@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <div class="wrapper show-category">
+  <div class="wrapper ">
 
     <!-- * Task Screen * -->
     <div class="category-screen screen">
@@ -18,8 +18,21 @@
         <div class="back-btn"><i class='bx bx-arrow-back'></i></div>
       </div>
       <div class="category-details">
-        div
+        <img src="./images/boy.png" alt="">
+        <div class="details">
+          <p><span class="personal-task">0</span> Tasks</p>
+          <h1>Personal</h1>
+        </div>
       </div>
+
+      <div class="list-container">
+        <ul id="task-list">
+          <li class="checked">Finish the project <span class="img"></span></li>
+          <li>Finish the project <span class="img"></span></li>
+          <li>Finish the project</li>
+        </ul>
+      </div>
+
     </div>
 
     <div class="screen-backdrop"></div>
@@ -60,7 +73,7 @@
               <div class="img"><img src="./images/briefcase.png" alt=""></div>
               <div class="content">
                 <h1>Work</h1>
-                <p><span class="personal-task">0</span> Tasks</p>
+                <p><span class="work-task">0</span> Tasks</p>
               </div>
             </div>
             <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
@@ -72,7 +85,7 @@
               <div class="img"><img src="./images/shopping.png" alt=""></div>
               <div class="content">
                 <h1>Shopping</h1>
-                <p><span class="personal-task">0</span> Tasks</p>
+                <p><span class="shopping-task">0</span> Tasks</p>
               </div>
             </div>
             <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
@@ -84,7 +97,7 @@
               <div class="img"><img src="./images/coding.png" alt=""></div>
               <div class="content">
                 <h1>Coding</h1>
-                <p><span class="personal-task">0</span> Tasks</p>
+                <p><span class="coding-task">0</span> Tasks</p>
               </div>
             </div>
             <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
@@ -96,7 +109,7 @@
               <div class="img"><img src="./images/healthcare.png" alt=""></div>
               <div class="content">
                 <h1>Health</h1>
-                <p><span class="personal-task">0</span> Tasks</p>
+                <p><span class="health-task">0</span> Tasks</p>
               </div>
             </div>
             <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
@@ -108,7 +121,7 @@
               <div class="img"><img src="./images/fitness.png" alt=""></div>
               <div class="content">
                 <h1>Fitness</h1>
-                <p><span class="personal-task">0</span> Tasks</p>
+                <p><span class="fitness-task">0</span> Tasks</p>
               </div>
             </div>
             <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
@@ -120,7 +133,7 @@
               <div class="img"><img src="./images/education.png" alt=""></div>
               <div class="content">
                 <h1>Education</h1>
-                <p><span class="personal-task">0</span> Tasks</p>
+                <p><span class="education-task">0</span> Tasks</p>
               </div>
             </div>
             <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
@@ -132,7 +145,7 @@
               <div class="img"><img src="./images/finance.png" alt=""></div>
               <div class="content">
                 <h1>Finance</h1>
-                <p><span class="personal-task">0</span> Tasks</p>
+                <p><span class="finance-task">0</span> Tasks</p>
               </div>
             </div>
             <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
@@ -141,6 +154,13 @@
         </div>
       </div>
 
+    </div>
+
+    <!-- * Add task button * -->
+
+    <div class="add-task-wrapper">
+      <div class="add-btn"><i class='bx bx-plus'></i></div>
+      
     </div>
 
     
