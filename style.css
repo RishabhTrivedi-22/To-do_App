@@ -192,12 +192,13 @@ body {
 }
 
 .category-details {
-  /* background-color: grey; */
   margin-top: 1.5rem;
   padding: 20px 30px;
   display: flex;
   align-items: center;
   gap: 1rem;
+  position: relative;
+  z-index: -1;
 }
 .category-details .details p{
   font-weight: 500;
@@ -286,4 +287,102 @@ body {
 }
 .add-btn:hover {
   transform: scale(1.1);
+}
+
+.add-btn.active {
+  z-index: 1;
+  bottom: 20rem;
+  transform: rotate(45deg);
+}
+
+.add-task-wrapper {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  padding: 20px 30px;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+.add-task-wrapper.active {
+  bottom: 0;
+}
+
+
+
+.input-grp {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-grp input,
+.input-grp label {
+  display: block;
+  width: 100%;
+}
+
+.input-grp input,
+.input-grp select {
+  width: 100%;
+  border: 1px solid black;
+  /* outline: none; */
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.input-grp label {
+  width: max-content;
+  padding: 0 5px;
+  margin: 5px 0 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1;
+}
+.addTaskBtn {
+  background: #BEEE62;
+}
+
+.add-task-backdrop {
+  width: 125%;
+  height: 20rem;
+  border-radius:50% 50% 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  z-index: -1;
+}
+.black-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  /* z-index: -1; */
+}
+
+.black-backdrop.active {
+  opacity: 1;
+  visibility: visible;
 }
