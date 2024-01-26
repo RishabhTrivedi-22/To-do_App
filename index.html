@@ -9,7 +9,7 @@
   <title>To-Do App</title>
 </head>
 <body>
-  
+   
   <div class="wrapper">
     
     
@@ -19,19 +19,14 @@
         <div class="back-btn"><i class='bx bx-arrow-back'></i></div>
       </div>
       <div class="category-details">
-        <img src="./images/boy.png" alt="">
+        <div class="categ-img"><img src="./images/boy.png" alt=""></div>
         <div class="details">
-          <p><span class="personal-task">0</span> Tasks</p>
-          <h1>Personal</h1>
+          <p><span class="category-task">0</span> Tasks</p>
+          <h1 class="category-title">Personal</h1>
         </div>
       </div>
 
-      <div class="list-container">
-        <ul id="task-list">
-          <li class="checked">Finish the project <span class="img"></span></li>
-          <li>Finish the project <span class="img"></span></li>
-        </ul>
-      </div>
+      <div class="list-container"> <ul id="task-list"></ul> </div>
       
     </div>
 
@@ -55,101 +50,19 @@
       <div class="category-wrapper">
         <div class="categories">
 
-          <!-- ? Personal Tasks -->
+         
           <div class="category">
             <div class="left">
-              <div class="img"><img src="./images/boy.png" alt=""></div>
+              <div class="categ-img"><img src="./images/boy.png" alt=""></div>
               <div class="content">
-                <h1>Personal</h1>
-                <p><span class="personal-task">0</span> Tasks</p>
+                <h1 class="category-title">Personal</h1>
+                <p><span class="category-task">0</span> Tasks</p>
               </div>
             </div>
             <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
           </div>
 
-          <!-- ? Work Tasks -->
-          <div class="category">
-            <div class="left">
-              <div class="img"><img src="./images/briefcase.png" alt=""></div>
-              <div class="content">
-                <h1>Work</h1>
-                <p><span class="work-task">0</span> Tasks</p>
-              </div>
-            </div>
-            <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
-          </div>
-
-          <!-- ? Shopping Tasks -->
-          <div class="category">
-            <div class="left">
-              <div class="img"><img src="./images/shopping.png" alt=""></div>
-              <div class="content">
-                <h1>Shopping</h1>
-                <p><span class="shopping-task">0</span> Tasks</p>
-              </div>
-            </div>
-            <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
-          </div>
-
-          <!-- ? Coding Tasks -->
-          <div class="category">
-            <div class="left">
-              <div class="img"><img src="./images/coding.png" alt=""></div>
-              <div class="content">
-                <h1>Coding</h1>
-                <p><span class="coding-task">0</span> Tasks</p>
-              </div>
-            </div>
-            <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
-          </div>
-
-          <!-- ? Health Tasks -->
-          <div class="category">
-            <div class="left">
-              <div class="img"><img src="./images/healthcare.png" alt=""></div>
-              <div class="content">
-                <h1>Health</h1>
-                <p><span class="health-task">0</span> Tasks</p>
-              </div>
-            </div>
-            <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
-          </div>
-
-          <!-- ? Fitness Tasks -->
-          <div class="category">
-            <div class="left">
-              <div class="img"><img src="./images/fitness.png" alt=""></div>
-              <div class="content">
-                <h1>Fitness</h1>
-                <p><span class="fitness-task">0</span> Tasks</p>
-              </div>
-            </div>
-            <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
-          </div>
-
-          <!-- ? Education Tasks -->
-          <div class="category">
-            <div class="left">
-              <div class="img"><img src="./images/education.png" alt=""></div>
-              <div class="content">
-                <h1>Education</h1>
-                <p><span class="education-task">0</span> Tasks</p>
-              </div>
-            </div>
-            <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
-          </div>
-
-          <!-- ? Finance Tasks -->
-          <div class="category">
-            <div class="left">
-              <div class="img"><img src="./images/finance.png" alt=""></div>
-              <div class="content">
-                <h1>Finance</h1>
-                <p><span class="finance-task">0</span> Tasks</p>
-              </div>
-            </div>
-            <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>
-          </div>
+          
 
         </div>
       </div>
@@ -157,7 +70,7 @@
 
     <!-- * Add task window * -->
     <!--  Add task button  -->
-    <div class="add-btn"><i class='bx bx-plus'></i></div>
+    <div class="task-btn"><i class='bx bx-plus'></i></div>
     <!-- Add black backdrop -->
     
       <div class="black-backdrop"></div>
@@ -175,15 +88,12 @@
       <div class="input-grp">
         <label for="category-select">Category</label>
         <select name="" id="category-select">
-          <option value="personal">Personal</option>
-          <option value="work">Work</option>
-          <option value="shopping">Shopping</option>
         </select>
       </div>
 
         <div class="buttons">
           <button class="cancel-btn">Cancel</button>
-          <button class="addTaskBtn">Add</button>
+          <button class="addBtn">Add</button>
         </div>
 
     </div>

@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
+ 
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -37,6 +37,10 @@ body {
     height: 100vh;
     border-radius: 0;
     border: none;
+  }
+  .categories {
+    height: 55rem;
+    
   }
 }
 
@@ -106,7 +110,7 @@ body {
   overflow: auto;
 }
 .categories {
-  max-height: 25rem;
+ height: 25rem;
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -268,7 +272,7 @@ body {
   visibility: visible;
 }
 
-.add-btn {
+.task-btn {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
@@ -282,14 +286,14 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.add-btn i {
+.task-btn i {
   font-size: 45px;
 }
-.add-btn:hover {
+.task-btn:hover {
   transform: scale(1.1);
 }
 
-.add-btn.active {
+.task-btn.active {
   z-index: 1;
   bottom: 20rem;
   transform: rotate(45deg);
@@ -353,7 +357,7 @@ body {
   cursor: pointer;
   z-index: 1;
 }
-.addTaskBtn {
+.addBtn {
   background: #BEEE62;
 }
 
