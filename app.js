@@ -208,10 +208,10 @@ const renderTask = () => {
 
       li.appendChild(span);
       taskContainer.appendChild(li);
-      saveLocal();
     });
-    renderCategory();
     updateTotal();
+    renderCategory();
+    saveLocal();
   }
 
 };
@@ -270,7 +270,7 @@ taskContainer.addEventListener("click", (e) => {
     const taskIndex = tasks.findIndex(task => task.task === taskText);
     if (taskIndex !== -1) {
       tasks.splice(taskIndex, 1);
-    }
+    } 
     e.target.parentElement.remove();
     saveLocal();
     updateTotal();

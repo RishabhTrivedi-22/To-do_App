@@ -28,21 +28,7 @@ body {
   position: relative;
 }
 
-@media (max-width:768px) {
-  body {
-    padding: 0;
-  }
-  .wrapper {
-    width: 100%;
-    height: 100vh;
-    border-radius: 0;
-    border: none;
-  }
-  .categories {
-    height: 55rem;
-    
-  }
-}
+
 
 .wrapper .screen {
   flex: 1;
