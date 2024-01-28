@@ -103,11 +103,12 @@ const totalTask = d.querySelector(".total-tasks");
 const categoryContainer = d.querySelector(".categories");
 const categScreen = d.querySelector(".category-screen");
 const categoryTitle = d.querySelector(".category-title");
-const categoryImg = d.querySelector(".categ-img");
+const categoryImg = d.querySelector(".categ-img img");
 const taskContainer = d.querySelector("#task-list");
 const taskInput = d.querySelector("#task-input");
 const categorySelct = d.querySelector("#category-select");
 const addTaskBtn = d.querySelector(".addBtn");
+const categoryScreen = d.querySelector(".category-screen");
 
 
 // * Basic Functions : -->
@@ -161,7 +162,7 @@ const renderCategory = () => {
   categoryContainer.innerHTML = "";
   categories.forEach((category) => {
     const categoryTask = tasks.filter((task) => {
-      return task.category.toLocaleLowerCase() === selectedCategory.title.toLocaleLowerCase();
+      return task.category.toLocaleLowerCase() === category.title.toLocaleLowerCase();
     });
     const div = d.createElement("div");
     div.classList.add("category");
@@ -172,7 +173,7 @@ const renderCategory = () => {
       categoryTitle.innerHTML = category.title;
       categoryImg.src = `./images/${category.img}`;
       renderTask();
-      saveLocal()
+      saveLocal();
     });
     div.innerHTML = `<div class="left">
                   <div class="categ-img"><img src="./images/${category.img}" alt="${category.title}"></div>
@@ -183,7 +184,6 @@ const renderCategory = () => {
                 </div>
                 <div class="right"><i class='bx bx-dots-vertical-rounded'></i></div>`;
     categoryContainer.appendChild(div);
-
   });
 };
 
@@ -249,6 +249,7 @@ const addTaskFunc = (e) => {
     saveLocal();
     toggleAddForm();
     renderTask();
+    updateTotal();
   }
 };
 
@@ -263,6 +264,7 @@ taskContainer.addEventListener("click", (e) => {
     }
     e.target.classList.toggle("checked");
     saveLocal();
+    updateTotal();
   } else if (e.target.tagName === "SPAN") {
     const taskText = e.target.parentElement.textContent.trim();
     const taskIndex = tasks.findIndex(task => task.task === taskText);
@@ -288,5 +290,7 @@ cancelBtn.addEventListener("click", toggleAddForm);
 
 // * Calling Funcs: -->
 getLocal();
+renderCategory();
 renderCategoryOptions();
 renderTask();
+updateTotal()
