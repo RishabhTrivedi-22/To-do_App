@@ -25,7 +25,9 @@
   .category .content h1 {
     font-size: 1.2rem; 
   }
-  
+  .task-btn {
+    bottom: 3rem;
+  }
   .input-grp input,
   .input-grp select {
     padding: 10px; 
